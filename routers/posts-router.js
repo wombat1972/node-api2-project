@@ -55,11 +55,9 @@ router.get("/:id/comments", (req, res) => {
     })
     .catch(err => {
       console.log("get posts error", err);
-      res
-        .status(500)
-        .json({
-          error: "The posts comments information could not be retrieved."
-        });
+      res.status(500).json({
+        error: "The posts comments information could not be retrieved."
+      });
     });
 });
 router.post("/", (req, res) => {
